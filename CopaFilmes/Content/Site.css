@@ -1,0 +1,38 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: gray;
+}
+
+hr {
+    width: 20px;
+}
+
+.tamanho{
+    width: 18px;
+    height: 18px;
+}
+
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.jumbotron-custon {
+    background-color: dimgrey;
+}
+
+.fonte-primaria {
+    color: white;
+}
+
+.fonte-secundaria{
+    color: lightgray;
+}
+
+

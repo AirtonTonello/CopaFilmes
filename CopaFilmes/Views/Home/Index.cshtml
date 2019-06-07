@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CopaFilmes.Models.Filme>
+@{
+    ViewBag.Title = "Copa de Filmes";
+}
+
+<script src="~/Scripts/Site.js" type="text/javascript"></script>
+
+<div id="corpo">
+    <div id="info">
+        @Html.Partial("_SelecaoHead")
+    </div>
+
+    <div id="resultado">
+        @Html.Partial("_SelecaoBody")
+    </div>
+</div>
