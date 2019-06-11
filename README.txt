@@ -1,0 +1,9 @@
+﻿Criado o Projeto Copa Filmes
+
+O projeto consome uma API que retorna uma lista de Filmes para o usuário selecionar. Após escolher os filmes o sistema irá gerar um campeonato que compara as notas de cada filme, ao final o sistema demonstra o ganhador.
+
+Para testar o projeto somente é necessário clonar o repositório e executar.
+
+Também pode ser testado através do link abaixo.
+
+https://copafilmes.azurewebsites.net
