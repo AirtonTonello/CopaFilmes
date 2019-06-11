@@ -4,16 +4,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Web;
 
 namespace CopaFilmes.Repository
 {
     public class FilmeRepository : IFilmeRepository
     {
+        /// <summary>
+        /// Construtor da classe
+        /// </summary>
+        #region Construtor
         public FilmeRepository()
         {
         }
+        #endregion
 
+        /// <summary>
+        /// Consome a API e retorna o IEnumerable da classe FIlme
+        /// </summary>
+        /// <returns></returns>
+        #region GetAll()
         public IEnumerable<Filme> GetAll()
         {
             List<Filme> filmes = new List<Filme>();
@@ -34,12 +43,26 @@ namespace CopaFilmes.Repository
 
             return filmes;
         }
+        #endregion
 
+        /// <summary>
+        /// Recebe como parametro a Classe Filme e chama a função que retorna o Vencedor
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        #region GetCampeao()
         public Filme GetCampeao(Filme model)
         {
             return GetVencedores(GetFinalistas(GetSemiFinais(model.FilmesSelecionados)));
         }
+        #endregion
 
+        /// <summary>
+        /// Recebe como parametro a List de Filmes e retorna os vencedores das SemiFinais
+        /// </summary>
+        /// <param name="todos"></param>
+        /// <returns></returns>
+        #region GetSemiFinais()
         private List<string> GetSemiFinais(IList<string> todos)
         {
             List<string> SemiFinais = new List<string>();
@@ -58,7 +81,14 @@ namespace CopaFilmes.Repository
 
             return SemiFinais;
         }
+        #endregion
 
+        /// <summary>
+        /// Recebe como parametro a List de Filmes que venceu as SemiFinais e retorna os vencedores para a Final
+        /// </summary>
+        /// <param name="SemiFinais"></param>
+        /// <returns></returns>
+        #region GetFinalistas()
         private List<string> GetFinalistas(List<string> SemiFinais)
         {
             List<string> Final = new List<string>();
@@ -77,7 +107,14 @@ namespace CopaFilmes.Repository
 
             return Final;
         }
+        #endregion
 
+        /// <summary>
+        /// Recebe os dois Finalistas e retorna a Classe Filme com o Campeão e o Vice
+        /// </summary>
+        /// <param name="Final"></param>
+        /// <returns></returns>
+        #region GetVencedores()
         private Filme GetVencedores(List<string> Final)
         {
             Filme f = new Filme();
@@ -99,5 +136,6 @@ namespace CopaFilmes.Repository
 
             return f;
         }
+        #endregion
     }
 }

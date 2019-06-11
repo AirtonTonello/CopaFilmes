@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CopaFilmes;
 using CopaFilmes.Controllers;
 using CopaFilmes.Repository;
 using CopaFilmes.Models;
@@ -14,6 +10,10 @@ namespace CopaFilmes.Tests.Controllers
     [TestClass]
     public class HomeControllerTest
     {
+        /// <summary>
+        /// O teste verifica se index não é retornada nula e se retorno é uma ViewResult
+        /// </summary>
+        #region IndexTest()
         [TestMethod]
         public void IndexTest()
         {
@@ -23,9 +23,15 @@ namespace CopaFilmes.Tests.Controllers
 
             ViewResult result = controller.Index() as ViewResult;
 
+            Assert.IsInstanceOfType(result, typeof(ViewResult));
             Assert.IsNotNull(result);
         }
+        #endregion
 
+        /// <summary>
+        /// O teste verifica se o retorno da API não é nulo e se o retorna é um IEnumerable
+        /// </summary>
+        #region GetAllTest()
         [TestMethod]
         public void GetAllTest()
         {
@@ -34,8 +40,14 @@ namespace CopaFilmes.Tests.Controllers
             var data = repository.GetAll();
 
             Assert.IsNotNull(data);
+            Assert.IsInstanceOfType(data, typeof(IEnumerable<Filme>));
         }
+        #endregion
 
+        /// <summary>
+        /// O teste verifica se o retorno do vencedor não é nulo e se o retorno é uma classe Filme
+        /// </summary>
+        #region GetCampeaoTest()
         [TestMethod]
         public void GetCampeaoTest()
         {
@@ -55,6 +67,8 @@ namespace CopaFilmes.Tests.Controllers
             var result = repository.GetCampeao(f);
 
             Assert.IsNotNull(result.Campeao);
+            Assert.IsInstanceOfType(result, typeof(Filme));
         }
+        #endregion
     }
 }
