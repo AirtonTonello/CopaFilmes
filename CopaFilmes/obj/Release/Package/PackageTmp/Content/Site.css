@@ -1,0 +1,153 @@
+﻿/* estiliza o body */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: gray;
+}
+
+/* personaliza o HR embaixo do texto */
+hr {
+    width: 30px;
+    height: 2px;
+    background-color: lightgray;
+}
+
+/* ajusta o checkbox dentro do card */
+.check-ajuste {
+    padding-top: 6px;
+}
+
+/* cria o checkbox */
+.check {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* oculta o input */
+    .check input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+/* personaliza o checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid darkgray;
+}
+
+/* alterado o checkbox para o estado checado */
+.check input:checked ~ .checkmark {
+    background-color: dimgray;
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.check .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* altera cor do jumbotron */
+.jumbotron-custon {
+    background-color: dimgrey;
+}
+
+/* altera tamanho da fonte do subtitulo */
+.fonte-subtitulo {
+    font-size: 16px;
+}
+
+/* altera a cor do texto para lightgray */
+.text-lightgray{
+    color: lightgray;
+}
+
+/* altera o tamanho do texto secundario do head */
+.fonte-secundaria {
+    font-size: 10px;
+}
+
+/* estiliza o butão personalizado */
+.btn-custon {
+    float: right;
+    height: 50px;
+    width: 170px;
+    font-size: 10px;
+    border-radius: 0;
+    border: 0.5px solid white;
+    color: white;
+    background-color: black;
+}
+
+/* estiliza o card personalizado */
+.card-custon {
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+
+/* ajusta espaçamento entre os textos */
+.text-ajuste {
+    line-height: 16px;
+}
+
+/* altera tamanho da fonte para o filme */
+.text-filme {
+    font-size: 14px;
+}
+
+/* altera tamanho da fonte para o ano do filme */
+.text-ano {
+    font-size: 12px;
+    color: grey;
+}
+
+/* ajusta td que exibe a posição */
+.td-posicao {
+    background-color: dimgray;
+    font-size: 30px;
+    color: white;
+    padding: 16px;
+    width: 10%;
+}
+
+/* ajusta a td que exibe os ganhadores */
+.td-resultado {
+    background-color: white;
+    color: dimgray;
+}
+
+/* personaliza a label que mostra os resultados */
+.label-custon {
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 18px;
+}
