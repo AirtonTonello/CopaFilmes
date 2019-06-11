@@ -14,17 +14,20 @@
                 <div class="card card-custon">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-2 check-ajuste">
-                                <label for="@item.Id" class="check">
-                                    <input id="@item.Id" style="display: none;" type="checkbox" name="FilmesSelecionados" value="@string.Concat(item.Titulo, "-", item.Nota)" onchange="contador(this.id)" />
-                                    <span class="checkmark"></span>
-                                </label>
-
+                            <div class="col-md-2">
+                                <div class="check-ajuste">
+                                    <label for="@item.Id" class="check">
+                                        <input id="@item.Id" style="display: none;" type="checkbox" name="FilmesSelecionados" value="@string.Concat(item.Titulo, "-", item.Nota)" onchange="contador(this.id)" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="col-md-10 text-ajuste">
-                                <label for="@item.Id" class="text-filme"><strong>@item.Titulo</strong></label>
-                                <br />
-                                <label class="text-ano" for="@item.Id">@item.Ano</label>
+                            <div class="col-md-10">
+                                <div class="text-ajuste">
+                                    <label for="@item.Id" class="text-filme"><strong>@item.Titulo</strong></label>
+                                    <br />
+                                    <label class="text-ano" for="@item.Id">@item.Ano</label>
+                                </div>
                             </div>
                         </div>
                     </div>

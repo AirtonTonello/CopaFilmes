@@ -86,7 +86,7 @@ hr {
 }
 
 /* altera a cor do texto para lightgray */
-.text-lightgray{
+.text-lightgray {
     color: lightgray;
 }
 
@@ -117,6 +117,18 @@ hr {
 /* ajusta espaçamento entre os textos */
 .text-ajuste {
     line-height: 16px;
+}
+
+/* ajustado classes para dispositivos mobile */
+@media(max-width: 768px) {
+    .check-ajuste {
+        padding-top: 0;
+    }
+
+    .text-ajuste {
+        line-height: 16px;
+        margin-left: 35px;
+    }
 }
 
 /* altera tamanho da fonte para o filme */
